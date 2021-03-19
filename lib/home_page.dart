@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
       extendBody: true,
       backgroundColor: Color.fromRGBO(244, 244, 244, 1),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -48,13 +49,14 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Desenvendado\nPrinceas',
                                   style: TextStyle(
-                                    fontSize: 30,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text(
                                   'By Flower Books',
                                   style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -198,7 +200,7 @@ class HomePage extends StatelessWidget {
                           width: MediaQuery.of(context).size.width,
                           height: MediaQuery.of(context).size.height * 0.1,
                           padding: EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 10),
+                              horizontal: 10, vertical: 20),
                           child: Text(
                             'Do you want to write something?',
                             style: TextStyle(
@@ -235,6 +237,7 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
