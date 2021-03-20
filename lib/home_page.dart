@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:saga/widgets/review_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -173,9 +174,9 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-                  Review(),
-                  Review(),
-                  Review(),
+                  ReviewCard(cardClr: Colors.white,),
+                  ReviewCard(cardClr: Colors.white,),
+                  ReviewCard(cardClr: Colors.white,),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                     height: MediaQuery.of(context).size.height * 0.28,
@@ -248,62 +249,3 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class Review extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(8),
-            ),
-            color: Colors.white,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: 20,
-                    backgroundColor: Color.fromRGBO(190, 194, 206, 1),
-                  ),
-                  SizedBox(width: 10),
-                  Column(
-                    children: [
-                      Text('Carlos Day'),
-                      Text(
-                        '5 days ago',
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              Text(
-                '\nLove it!!!',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                'I have a chance to my knowledge. Thanks.',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-      ],
-    );
-  }
-}

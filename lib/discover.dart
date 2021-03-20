@@ -61,7 +61,7 @@ class DiscoverPage extends StatelessWidget {
                         "Lorem Ipsum is simply dummy text of the printing and\n typesetting industry. Lorem Ipsum\n has been the industry's\n\n standard dummy text ever since the 1500s\n"
                         " when an unknown printer took a\n galley of type and scrambled it to make a type specimen book.\n It has survived not only five centuries, but also the leap\n\n into electronic typesetting, remaining essentially unchanged.\n"
                         " when an unknown printer took a galley of type and\n scrambled it to make a type specimen book.\n It has survived not\n only five centuries, but also the \nleap into electronic typesetting, remaining essentially unchanged.\n\n"
-                        "Lorem Ipsum is simply dummy text\n\n of the printing and\n typesetting industry. Lorem Ipsum\n has been the industry's\n\n standard dummy text ever since the 1500s\n")
+                        "Lorem Ipsum is simply dummy text\n\n of the printing and\n typesetting industry. Lorem Ipsum\n has been the industry's\n\n standard dummy text ever since the 1500s\n"),
                   ],
                 ),
               ),
