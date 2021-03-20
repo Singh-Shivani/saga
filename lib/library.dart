@@ -28,7 +28,7 @@ class LibraryPage extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
-                    height: MediaQuery.of(context).size.height,
+                    // height: MediaQuery.of(context).size.height,
                     width: MediaQuery.of(context).size.width,
                     child: Container(
                       decoration: BoxDecoration(
@@ -44,9 +44,9 @@ class LibraryPage extends StatelessWidget {
                           children: [
                             Container(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 20, vertical: 20),
+                                  horizontal: 20, vertical: 15),
                               margin: EdgeInsets.symmetric(vertical: 20),
-                              width: MediaQuery.of(context).size.width * 0.4,
+                              width: MediaQuery.of(context).size.width * 0.5,
                               child: Center(
                                 child: Text(
                                   "Buy For \$62.8",
@@ -72,9 +72,7 @@ class LibraryPage extends StatelessWidget {
                               ),
                             ),
                             Text(
-                                "Lorem Ipsum is simply dummy text of the printing and\n typesetting industry. Lorem Ipsum\n has been the industry's\n\n standard dummy text ever since the 1500s\n"
-                                " when an unknown printer took a\n servived not only five centuries, but also the leap\n\n into electronic typesetting, remaining essentially unchanged.\n"
-                                " when an unknown printer took a galley of\n\n when an unknown printer took a galley of\nwhen an unknown printer took a galley of\n\n "),
+                                "Lorem Ipsum is simply dummy text of the printing and\n typesetting industry. Lorem Ipsum\n has been the industry's\n\n standard dummy text ever since the 1500s\nnown printer took a galley of\n\n "),
                             ReviewCard(
                               cardClr: Colors.transparent,
                             ),
@@ -85,7 +83,7 @@ class LibraryPage extends StatelessWidget {
                               children: [
                                 Image.asset(
                                   'images/flowerBookLogo.png',
-                                  width: 70,
+                                  width: 60,
                                 ),
                                 SizedBox(width: 10),
                                 Column(
@@ -134,6 +132,7 @@ class LibraryPage extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            SizedBox(height: 10),
                           ],
                         ),
                       ),
@@ -163,7 +162,7 @@ class UpperHeader extends StatelessWidget {
               child: Icon(Icons.arrow_back_ios),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
+              height: MediaQuery.of(context).size.height * 0.15,
             ),
             Center(
               child: Text(
