@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:saga/epub_viewer.dart';
 import 'package:saga/widgets/review_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,10 +16,8 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-              child: SafeArea(
-                child: Icon(Icons.arrow_back_ios),
-              ),
+              padding: EdgeInsets.only(left: 10, top: 30, bottom: 10),
+              child: Icon(Icons.arrow_back_ios),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -29,13 +28,22 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        height: MediaQuery.of(context).size.width * 0.5,
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(190, 194, 206, 1),
-                          border: Border.all(color: Colors.white),
+                      GestureDetector(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          height: MediaQuery.of(context).size.width * 0.5,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(190, 194, 206, 1),
+                          ),
                         ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => EpubPage(),
+                            ),
+                          );
+                        },
                       ),
                       Container(
                         height: MediaQuery.of(context).size.height * 0.28,
@@ -50,7 +58,7 @@ class HomePage extends StatelessWidget {
                                 Text(
                                   'Desenvendado\nPrinceas',
                                   style: TextStyle(
-                                    fontSize: 25,
+                                    fontSize: 22,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -174,9 +182,15 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-                  ReviewCard(cardClr: Colors.white,),
-                  ReviewCard(cardClr: Colors.white,),
-                  ReviewCard(cardClr: Colors.white,),
+                  ReviewCard(
+                    cardClr: Colors.white,
+                  ),
+                  ReviewCard(
+                    cardClr: Colors.white,
+                  ),
+                  ReviewCard(
+                    cardClr: Colors.white,
+                  ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                     height: MediaQuery.of(context).size.height * 0.28,
@@ -248,4 +262,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

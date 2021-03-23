@@ -51,7 +51,7 @@ class LibraryPage extends StatelessWidget {
                                 child: Text(
                                   "Buy For \$62.8",
                                   style: TextStyle(
-                                    fontSize: 17,
+                                    fontSize: 15,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.white,
                                   ),
